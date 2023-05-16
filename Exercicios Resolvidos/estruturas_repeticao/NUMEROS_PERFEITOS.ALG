@@ -41,6 +41,7 @@ Inicio
    leia(palavra)
    se (palavra="s") entao
      sair<-verdadeiro
+    senao
      soma<-0
    fimse
    fimenquanto
