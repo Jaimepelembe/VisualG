@@ -6,21 +6,29 @@ Algoritmo "exer_1_vetor_10valores"
 // Data atual  : 20/05/2023
 Var
 // Seção de Declarações das variáveis 
-i,j:inteiro
+i,indices:inteiro
 A: vetor[1..10] de inteiro
 
 Inicio
-// Seção de Comandos, procedimento, funções, operadores, etc... 
+// Seção de Comandos, procedimento, funções, operadores, etc...
+indices <-10
 escreval("Preencha o vetor")
-
-para i de 1 ate 10 faca
+para i de 1 ate indices faca
      escreva("Digite o número ",i,": ")
      leia(A[i])
 fimpara
 
-para j de 1 ate 10 faca
-     se A[j]=10 entao
-        escreval("O número 10 está na posição ",j)
+escreval("O vetor lido é:")
+escreva("A={")
+para i de 1 ate (indices-1) faca
+        escreva(A[i],",")
+fimpara
+escreval(A[indices],"}")
+
+escreva("O número 10 está nas posições:")
+para i de 1 ate indices faca
+     se A[i]=10 entao
+        escreva(i,",")
      fimse
 fimpara
 
