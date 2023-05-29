@@ -27,8 +27,9 @@ repita
    enquanto ((prova=verdadeiro) e (divisor<=(numero-1)) ) faca
             se(numero%divisor=0) entao
                 prova<-falso
+            senao
+                   divisor<-divisor+1
             fimse
-            divisor<-divisor+1
 
    fimenquanto
 
@@ -39,14 +40,16 @@ repita
 
    numero<-numero+1
 
-  
 ate(contador=10)
 
-escreval("Os 10 primeiros números primos maiores que 100 são:")
+escreval("Os",contador," primeiros números primos maiores que 100 são:")
 
-enquanto i<=10 FACA
-          escreval(primos[i])
+escreva("Primos {")
+enquanto i<contador FACA
+          escreva(primos[i],",")
           i<-i+1
 fimenquanto
+escreva(primos[contador],"}")
+
 
 Fimalgoritmo

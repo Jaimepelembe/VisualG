@@ -7,22 +7,25 @@ Algoritmo "Exer_7_ordenacao_vetor"
 Var
 // Seção de Declarações das variáveis 
  A: vetor[1..15] de inteiro
- i,j,l,lenght,aux: inteiro
+ i,j,lenght,aux: inteiro
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
 lenght<-15
  escreval("Preencha o vector")
- para l de 1 ate lenght faca
-      escreva("Digite o número ",l,": ")
-      leia(A[l])
+ para i de 1 ate lenght faca
+      escreva("Digite o número ",i,": ")
+      leia(A[i])
  fimpara
-
+escreval("")
 
  escreval("Vector não ordenado")
- para l de 1 ate lenght faca
-      escreval(A[l])
+ escreva("A={")
+ para i de 1 ate (lenght-1) faca
+      escreva(A[i],",")
  fimpara
+ escreval(A[lenght],"}")
+
 
  //Ordenação do vetor
  lenght<-lenght-1
@@ -33,14 +36,16 @@ lenght<-15
          A[i]<-A[i+1]
          A[i+1]<-aux
       fimse
- fimpara
+fimpara
 fimpara
 
 //Exibição do vetor ordenado
-lenght<-lenght+1
+
 escreval("Vector ordenado")
-para l de 1 ate lenght faca
-     escreval(A[l])
+escreva("A={")
+para i de 1 ate lenght faca
+     escreva(A[i],",")
 fimpara
+escreva(A[lenght+1],"}")
 
 Fimalgoritmo

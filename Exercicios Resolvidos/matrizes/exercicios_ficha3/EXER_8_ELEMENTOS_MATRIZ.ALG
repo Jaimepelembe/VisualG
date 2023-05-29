@@ -36,19 +36,22 @@ para j de 1 ate colunas faca
 fimpara
 fimpara
 
- se (pares >0) entao
+ se (pares <>0) entao
       media<-soma/pares
       escreval("A média dos números pares é: ",media)
  senao
-      escreval("Não existe nenhum número par na matriz, logo a média é zero")
+      escreval("Não existe nenhum número par na matriz")
  fimse
  
 escreval("Os elementos da matriz são:")
+escreval("M={")
 para i de 1 ate linhas faca
 para j de 1 ate colunas faca
-     escreval(matrix[i,j])
+     escreva(matrix[i,j],"":4)
 fimpara
+escreval("")
 fimpara
+escreval("}")
 
 
 

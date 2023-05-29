@@ -39,7 +39,7 @@ para i de 1 ate indice faca
     fimse
 fimpara
 
-
+//Escrita do vetor alterado
 escreval("Vetor com elementos trocados: ")
 escreva("N={")
 para i de 1 ate (indice-1) faca
