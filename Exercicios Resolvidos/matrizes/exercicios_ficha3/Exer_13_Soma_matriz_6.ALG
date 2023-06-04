@@ -34,54 +34,49 @@ fimpara
 para i de 1 ate linhas faca
 para j de 1 ate colunas faca
      //Soma da parte 1
-     
+
      se( (i<>j) e (i<linhas) e (j>1) e (i<j) ) entao
          soma[1]<- soma[1]+M[i,j]
      fimse
-     
+
      //Soma da parte 2
      se( (j<> (aux-i)) e (j<colunas) e (i<linhas)  e i>=j ) entao
           soma[2] <-soma[2]+M[i,j]
      fimse
-     
-    se (linhas=3) entao
-      soma[3]<-M[1,2]
-      soma[4]<-M[2,1]
-      soma[5]<-M[2,1]+[2,3]
-      soma[6]<-M[1,2]+M[3,2]
-      soma[7]<- M[1,2]+M[2,1]
-      
-      
-    senao
-    //Soma da parte 3
-           se ( (i<=linhas-3) e (j>1) e (j<colunas)) entao
+     //Todas as somas apartir da 3 nao trabalham com valores da diagnol primaria ou secundaria
+     se((i<>j) e (j<>(aux-i))) entao
+     //Soma da parte 3
+           se ( (i<3) e (j>1) e (j<colunas)) entao
                  soma[3] <-soma[3]+M[i,j]
           fimse
     //Soma da parte 4
-          se ( (j<=colunas-3) e (i>1) e (i<linhas)) entao
+          se ((i>1) e (i<linhas)e (j<3)) entao
                  soma[4] <-soma[4]+M[i,j]
           fimse
     //Soma da parte 5
-          se ((i>1) e (i<linhas) e ( (j<=colunas-3) ou (j>3) )) entao
+          se ((i>1) e (i<linhas) e ((j<3) ou (j>4))) entao
                     soma[5] <-soma[5]+M[i,j]
           fimse
 
    //Soma da parte 6
-           se ( ( (i<=linhas-3) ou (i>3) ) e (j>1) e (j<colunas)) entao
+           se ((j>1) e (j<colunas)e ((i<3) ou (i>4))) entao
                  soma[6] <-soma[6]+M[i,j]
           fimse
    //Soma da parte 7
-           se ( ((i<=linhas-3) e (j>1) e (j<colunas)) ou ( (j<=colunas-3) e (i>1) e (i<linhas) )  ) entao
+           se ( (i<linhas) e((i<3)ou (i>=3)) e(j<colunas) e ((j>1) ou (j<3))   ) entao
                  soma[7] <-soma[7]+M[i,j]
           fimse
     //Soma da parte 8
-           se ( ((j<=colunas-3) e (i>1) e (i<linhas)) ou ( (i>3)  e (j>1) e (j<colunas) )  ) entao
+           se ( (i>1) e ((i<linhas)ou (i>3)) e ((j<colunas)ou(j<3)) ) entao
                  soma[8] <-soma[8]+M[i,j]
           fimse
 
-    fimse
 
      
+     fimse
+
+
+
 fimpara
 fimpara
 
@@ -98,4 +93,4 @@ escreval("A soma da parte ", i," é: ",soma[i])
 fimpara
 
 
-Fimalgoritmo
+FimalgoritMO
